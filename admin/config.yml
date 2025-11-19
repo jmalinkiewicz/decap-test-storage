@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: jmalinkiewicz/decap-test-storage
+  branch: main
+  auth_type: implicit
+  app_id: Ov23liHFGL363hfDRxjp
+media_folder: "content/uploads"
+public_folder: "/content/uploads"
+
+collections:
+  - name: posts
+    label: Posts
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+      - { name: image, label: Image, widget: image }
